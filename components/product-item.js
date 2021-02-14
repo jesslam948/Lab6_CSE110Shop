@@ -92,6 +92,7 @@ class ProductItem extends HTMLElement {
     button.onclick = () => {
       var cartList = JSON.parse(localStorage.getItem('cartList'));
       if (!cartList.includes(this.getAttribute('id'))) {
+        alert('Added to cart!');
         let cartCount = JSON.parse(localStorage.getItem('cartList')).length + 1
         localStorage.setItem('cartCount', cartCount);
         button.textContent = 'Remove from Cart';
